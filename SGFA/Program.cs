@@ -76,7 +76,12 @@ namespace SGFA
             {
                 Console.Write("Introduz a matricula: ");
                 string matricula = Console.ReadLine();
-
+                if (frota.Any(v => v.Matricula.Equals(matricula )))
+                {
+                    Console.WriteLine("Erro: Já existe um veículo com essa matrícula na frota!");
+                    return;
+                }
+                
                 Console.Write("Introduz a capacidade do deposito (litros): ");
 
                 if (!int.TryParse(Console.ReadLine(), out int capacidade))
