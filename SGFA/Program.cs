@@ -141,7 +141,9 @@ namespace SGFA
             }
 
             Console.Write("Quantos litros queres colocar? ");
-
+            // ! (Inversão Logica)
+            // double.TryParse (É um método inteligente do C# que tenta converter um texto numa variável do tipo double) 
+            // out (Diz ao programa se conseguires guardar resultado diretamente dentro desta nova variável chamada litros)
             if (!double.TryParse(Console.ReadLine(), out double litros))
             {
                 Console.WriteLine("ERRO: Quantidade invalida!");
@@ -162,7 +164,7 @@ namespace SGFA
             }
 
             Console.Write("Quantos quilometros queres percorrer? ");
-
+            
             if (!int.TryParse(Console.ReadLine(), out int km))
             {
                 Console.WriteLine("ERRO: Distancia invalida!");
